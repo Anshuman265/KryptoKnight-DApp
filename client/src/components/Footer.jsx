@@ -1,26 +1,26 @@
 import logo from '../../images/logo2.png';
-
+import {Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <div className='w-full flex md:justify-center justify-between items-center flex-col p-4 gradient-bg-footer'>
       <div className='w-full flex sm:flex-row flex-col justify-between items-center my-4'>
-        <div className='flex flex-[0.5] justify-center items-center'>
+        <Link to="/" className='flex flex-[0.5] justify-center items-center'>
           <img src={logo} alt='logo' className='w-32' />
           <div className='text-based text-white text-2xl'>KryptoKnight</div>
-        </div>
+        </Link>
         <div className='flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full'>
-          <p className='text-white text-base text-center mx-2 cursor-pointer'>
+          <Link to="/market" className='text-white text-base text-center mx-2 cursor-pointer'>
+              Home
+          </Link>
+          <Link to="/market" className='text-white text-base text-center mx-2 cursor-pointer'>
             Market
-          </p>
-          <p className='text-white text-base text-center mx-2 cursor-pointer'>
+          </Link>
+          <Link to="/exchange" className='text-white text-base text-center mx-2 cursor-pointer'>
             Exchange
-          </p>
-          <p className='text-white text-base text-center mx-2 cursor-pointer'>
+          </Link>
+          <Link to="/tutorials" className='text-white text-base text-center mx-2 cursor-pointer'>
             Tutorials
-          </p>
-          <p className='text-white text-base text-center mx-2 cursor-pointer'>
-            Wallets
-          </p>
+          </Link>
         </div>
       </div>
 
